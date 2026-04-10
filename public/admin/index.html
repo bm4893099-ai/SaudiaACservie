@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Saudia AC Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/premium-light.css" />
+    <link rel="stylesheet" href="/css/portfolio-luxe.css" />
+  </head>
+  <body data-page="admin">
+    <div class="page-shell admin-shell">
+      <header class="site-header admin-header">
+        <div class="container nav-row">
+          <a class="brand" href="/">
+            <span class="brand-mark">SA</span>
+            <span class="brand-copy">
+              <strong>Saudia AC Service</strong>
+              <small>Admin Control Panel</small>
+            </span>
+          </a>
+          <nav class="nav-links">
+            <a href="/">Website</a>
+            <a href="/contact/">Contact Page</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="admin-main">
+        <section class="admin-hero">
+          <div class="container admin-hero-grid">
+            <div class="glass-panel admin-hero-card">
+              <span class="eyebrow">Private Dashboard</span>
+              <h1>Shape the brand, service language, and enquiry experience</h1>
+              <p>
+                A refined control space for your public messaging, contact details, visual assets, and every incoming request.
+              </p>
+            </div>
+            <div class="glass-panel admin-metric-card">
+              <span>Incoming Requests</span>
+              <strong id="submissionCount">0</strong>
+              <small>Live overview of current demand across your portfolio site</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-section">
+          <div class="container admin-grid-layout">
+            <div class="glass-panel admin-form-panel">
+              <div class="panel-heading">
+                <h2>Portfolio Settings</h2>
+                <p>Every field below shapes the public-facing brand experience in real time.</p>
+              </div>
+              <form id="settingsForm" class="premium-form admin-form">
+                <div class="admin-form-grid">
+                  <label>
+                    <span>Business Name</span>
+                    <input id="businessName" name="businessName" type="text" />
+                  </label>
+                  <label>
+                    <span>Tagline</span>
+                    <input id="tagline" name="tagline" type="text" />
+                  </label>
+                  <label class="full-width">
+                    <span>Hero Badge</span>
+                    <input id="heroBadge" name="heroBadge" type="text" />
+                  </label>
+                  <label>
+                    <span>Hero Title</span>
+                    <input id="heroTitle" name="heroTitle" type="text" />
+                  </label>
+                  <label>
+                    <span>Hero Subtitle</span>
+                    <input id="heroSubtitle" name="heroSubtitle" type="text" />
+                  </label>
+                  <label>
+                    <span>Phone Number</span>
+                    <input id="phone" name="phone" type="text" />
+                  </label>
+                  <label>
+                    <span>WhatsApp Number</span>
+                    <input id="whatsappNumber" name="whatsappNumber" type="text" />
+                  </label>
+                  <label>
+                    <span>Email</span>
+                    <input id="email" name="email" type="email" />
+                  </label>
+                  <label>
+                    <span>Address</span>
+                    <input id="address" name="address" type="text" />
+                  </label>
+                  <label>
+                    <span>Map Link</span>
+                    <input id="mapLink" name="mapLink" type="text" />
+                  </label>
+                  <label>
+                    <span>Working Hours</span>
+                    <input id="workingHours" name="workingHours" type="text" />
+                  </label>
+                  <label class="full-width">
+                    <span>Footer Note</span>
+                    <textarea id="footerNote" name="footerNote" rows="4"></textarea>
+                  </label>
+                </div>
+
+                <div class="panel-heading inline-heading">
+                  <h3>Social Presence</h3>
+                  <p>Curate exactly which premium contact channels appear on the site.</p>
+                </div>
+                <div class="social-admin-grid">
+                  <div class="social-admin-card">
+                    <label>
+                      <span>Instagram URL</span>
+                      <input id="instagramUrl" type="text" />
+                    </label>
+                    <label class="toggle-row"><input id="instagramEnabled" type="checkbox" /> <span>Enabled</span></label>
+                  </div>
+                  <div class="social-admin-card">
+                    <label>
+                      <span>WhatsApp URL</span>
+                      <input id="whatsappUrl" type="text" />
+                    </label>
+                    <label class="toggle-row"><input id="whatsappEnabled" type="checkbox" /> <span>Enabled</span></label>
+                  </div>
+                  <div class="social-admin-card">
+                    <label>
+                      <span>Facebook URL</span>
+                      <input id="facebookUrl" type="text" />
+                    </label>
+                    <label class="toggle-row"><input id="facebookEnabled" type="checkbox" /> <span>Enabled</span></label>
+                  </div>
+                  <div class="social-admin-card">
+                    <label>
+                      <span>TikTok URL</span>
+                      <input id="tiktokUrl" type="text" />
+                    </label>
+                    <label class="toggle-row"><input id="tiktokEnabled" type="checkbox" /> <span>Enabled</span></label>
+                  </div>
+                  <div class="social-admin-card">
+                    <label>
+                      <span>X URL</span>
+                      <input id="xUrl" type="text" />
+                    </label>
+                    <label class="toggle-row"><input id="xEnabled" type="checkbox" /> <span>Enabled</span></label>
+                  </div>
+                </div>
+
+                <div class="panel-heading inline-heading">
+                  <h3>Visual Assets</h3>
+                  <p>Use polished high-resolution imagery to preserve the premium presentation.</p>
+                </div>
+                <div class="admin-form-grid">
+                  <label>
+                    <span>AC Repair Image</span>
+                    <input id="acRepairImage" type="text" />
+                  </label>
+                  <label>
+                    <span>Fridge Repair Image</span>
+                    <input id="fridgeRepairImage" type="text" />
+                  </label>
+                  <label>
+                    <span>Washing Machine Repair Image</span>
+                    <input id="washingMachineRepairImage" type="text" />
+                  </label>
+                  <label>
+                    <span>Electronics Repair Image</span>
+                    <input id="electronicsRepairImage" type="text" />
+                  </label>
+                </div>
+
+                <button class="primary-button" type="submit">Save Portfolio Settings</button>
+                <p id="settingsStatus" class="form-status" role="status"></p>
+              </form>
+            </div>
+
+            <div class="glass-panel admin-submissions-panel">
+              <div class="panel-heading">
+                <h2>Client Requests</h2>
+                <p>Every enquiry submitted from the public experience is collected here.</p>
+              </div>
+              <div id="submissionsList" class="submissions-list"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/js/admin.js" defer></script>
+  </body>
+</html>
