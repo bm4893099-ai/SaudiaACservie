@@ -328,6 +328,34 @@ let currentLang = localStorage.getItem('saudia-ac-language') || 'en';
 let siteSettings = null;
 let isContactFormBound = false;
 
+const defaultSiteSettings = {
+  businessName: 'Saudia AC Service',
+  tagline: 'Ultra-Premium Appliance Care in Dammam',
+  heroBadge: 'Private-service standard for AC, refrigeration, laundry, and electronics care',
+  heroTitle: 'A more refined standard for appliance repair in Dammam',
+  heroSubtitle: 'Fast response, precise diagnostics, and beautifully handled service visits for homes, apartments, and business spaces.',
+  phone: '+966 50 000 0000',
+  whatsappNumber: '+966500000000',
+  email: 'hello@saudiaacservice.com',
+  address: 'Dammam, Eastern Province, Saudi Arabia',
+  mapLink: 'https://maps.google.com/?q=Dammam%2C+Saudi+Arabia',
+  workingHours: 'Saturday - Thursday | 8:00 AM - 10:00 PM',
+  footerNote: 'Quietly premium service, careful workmanship, and dependable follow-through for modern homes and businesses in Dammam.',
+  socials: {
+    instagram: { url: 'https://instagram.com/saudiaacservice', enabled: true },
+    whatsapp: { url: 'https://wa.me/966500000000', enabled: true },
+    facebook: { url: 'https://facebook.com/saudiaacservice', enabled: true },
+    tiktok: { url: 'https://tiktok.com/@saudiaacservice', enabled: false },
+    x: { url: 'https://x.com/saudiaacservice', enabled: false },
+  },
+  serviceImages: {
+    acRepair: 'https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
+    fridgeRepair: 'https://images.pexels.com/photos/4108713/pexels-photo-4108713.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
+    washingMachineRepair: 'https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
+    electronicsRepair: 'https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
+  },
+};
+
 const setText = (id, value) => {
   const element = document.getElementById(id);
   if (element) {
@@ -346,22 +374,23 @@ const setLink = (id, href, text) => {
 };
 
 const getLocalizedSiteSettings = () => {
+  const base = siteSettings || defaultSiteSettings;
   const localeSettings = translations[currentLang].siteSettings;
 
   if (!localeSettings) {
-    return siteSettings;
+    return base;
   }
 
   return {
-    ...siteSettings,
-    businessName: localeSettings.businessName ?? siteSettings.businessName,
-    tagline: localeSettings.tagline ?? siteSettings.tagline,
-    heroBadge: localeSettings.heroBadge ?? siteSettings.heroBadge,
-    heroTitle: localeSettings.heroTitle ?? siteSettings.heroTitle,
-    heroSubtitle: localeSettings.heroSubtitle ?? siteSettings.heroSubtitle,
-    footerNote: localeSettings.footerNote ?? siteSettings.footerNote,
-    address: localeSettings.address ?? siteSettings.address,
-    workingHours: localeSettings.workingHours ?? siteSettings.workingHours,
+    ...base,
+    businessName: localeSettings.businessName ?? base.businessName,
+    tagline: localeSettings.tagline ?? base.tagline,
+    heroBadge: localeSettings.heroBadge ?? base.heroBadge,
+    heroTitle: localeSettings.heroTitle ?? base.heroTitle,
+    heroSubtitle: localeSettings.heroSubtitle ?? base.heroSubtitle,
+    footerNote: localeSettings.footerNote ?? base.footerNote,
+    address: localeSettings.address ?? base.address,
+    workingHours: localeSettings.workingHours ?? base.workingHours,
   };
 };
 
@@ -649,15 +678,14 @@ const init = async () => {
   try {
     const response = await fetch('/api/public/settings');
 
-    if (!response.ok) {
-      throw new Error('Unable to load settings');
+    if (response.ok) {
+      siteSettings = await response.json();
     }
-
-    siteSettings = await response.json();
-    renderPage();
   } catch (error) {
-    console.error(error);
+    console.error('Settings API failed, using fallback defaults', error);
   }
+
+  renderPage();
 };
 
 languageToggleButton?.addEventListener('click', () => {
