@@ -661,16 +661,20 @@ const attachContactForm = () => {
 };
 
 const renderPage = () => {
-  applyDirection();
-  renderCommon();
+  try {
+    applyDirection();
+    renderCommon();
 
-  if (page === 'home') {
-    renderHomePage();
-  }
+    if (page === 'home') {
+      renderHomePage();
+    }
 
-  if (page === 'contact') {
-    renderContactPage();
-    attachContactForm();
+    if (page === 'contact') {
+      renderContactPage();
+      attachContactForm();
+    }
+  } catch (error) {
+    console.error('Render error:', error);
   }
 };
 
@@ -679,7 +683,8 @@ const init = async () => {
     const response = await fetch('/api/public/settings');
 
     if (response.ok) {
-      siteSettings = await response.json();
+      const data = await response.json();
+      siteSettings = data && typeof data === 'object' ? data : defaultSiteSettings;
     } else {
       console.error('Settings API returned error, using fallback defaults');
       siteSettings = defaultSiteSettings;
