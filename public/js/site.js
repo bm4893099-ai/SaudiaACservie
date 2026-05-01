@@ -680,9 +680,13 @@ const init = async () => {
 
     if (response.ok) {
       siteSettings = await response.json();
+    } else {
+      console.error('Settings API returned error, using fallback defaults');
+      siteSettings = defaultSiteSettings;
     }
   } catch (error) {
     console.error('Settings API failed, using fallback defaults', error);
+    siteSettings = defaultSiteSettings;
   }
 
   renderPage();
