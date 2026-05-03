@@ -311,7 +311,7 @@ const translations = {
     },
     siteSettings: {
       businessName: 'سعودية AC سيرفس',
-      tagline: 'عناية فائقة الجودة بالأجهزة في الدمام',
+      tagline: 'عناية بالأجهزة في الدمام',
       heroBadge: 'معيار خدمة خاص للمكيفات والتبريد والغسيل والإلكترونيات',
       heroTitle: 'معيار أكثر رقيّاً لصيانة الأجهزة في الدمام',
       heroSubtitle: 'استجابة سريعة، وتشخيص دقيق، وزيارات خدمة أنيقة للمنازل والشقق ومساحات الأعمال.',
@@ -330,7 +330,7 @@ let isContactFormBound = false;
 
 const defaultSiteSettings = {
   businessName: 'Saudia AC Service',
-  tagline: 'Ultra-Premium Appliance Care in Dammam',
+  tagline: 'Appliance Care in Dammam',
   heroBadge: 'Private-service standard for AC, refrigeration, laundry, and electronics care',
   heroTitle: 'A more refined standard for appliance repair in Dammam',
   heroSubtitle: 'Fast response, precise diagnostics, and beautifully handled service visits for homes, apartments, and business spaces.',

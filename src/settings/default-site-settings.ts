@@ -1,6 +1,6 @@
 export const defaultSiteSettings = {
   businessName: 'Saudia AC Service',
-  tagline: 'Ultra-Premium Appliance Care in Dammam',
+  tagline: 'Appliance Care in Dammam',
   heroBadge: 'Private-service standard for AC, refrigeration, laundry, and electronics care',
   heroTitle: 'A more refined standard for appliance repair in Dammam',
   heroSubtitle:
