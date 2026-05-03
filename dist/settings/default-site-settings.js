@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultSiteSettings = void 0;
 exports.defaultSiteSettings = {
     businessName: 'Saudia AC Service',
-    tagline: 'Ultra-Premium Appliance Care in Dammam',
+    tagline: 'Appliance Care in Dammam',
     heroBadge: 'Private-service standard for AC, refrigeration, laundry, and electronics care',
     heroTitle: 'A more refined standard for appliance repair in Dammam',
     heroSubtitle: 'Fast response, precise diagnostics, and beautifully handled service visits for homes, apartments, and business spaces.',

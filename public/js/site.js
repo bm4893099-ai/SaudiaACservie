@@ -152,7 +152,7 @@ const translations = {
     },
     siteSettings: {
       businessName: 'Saudia AC Service',
-      tagline: 'Ultra-Premium Appliance Care in Dammam',
+      tagline: 'Appliance Care in Dammam',
       heroBadge: 'Private-service standard for AC, refrigeration, laundry, and electronics care',
       heroTitle: 'A more refined standard for appliance repair in Dammam',
       heroSubtitle:
@@ -425,7 +425,8 @@ const renderCommon = () => {
   document.title = copy.common.pageTitles?.[page] || document.title;
 
   setText('brandName', localizedSettings.businessName);
-  setText('brandTagline', localizedSettings.tagline);
+  const cleanTagline = (localizedSettings.tagline || '').replace(/Ultra[-\s]Premium\s*/i, '').trim();
+  setText('brandTagline', cleanTagline || localizedSettings.tagline);
   setText('footerBusinessName', localizedSettings.businessName);
   setText('footerNote', localizedSettings.footerNote);
   setText('footerContactHeading', copy.common.footerContactHeading);
