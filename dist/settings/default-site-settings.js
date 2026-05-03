@@ -7,8 +7,8 @@ exports.defaultSiteSettings = {
     heroBadge: 'Private-service standard for AC, refrigeration, laundry, and electronics care',
     heroTitle: 'A more refined standard for appliance repair in Dammam',
     heroSubtitle: 'Fast response, precise diagnostics, and beautifully handled service visits for homes, apartments, and business spaces.',
-    phone: '+966 50 000 0000',
-    whatsappNumber: '+966500000000',
+    phone: '+966 55 424 9731',
+    whatsappNumber: '+966554249731',
     email: 'hello@saudiaacservice.com',
     address: 'Dammam, Eastern Province, Saudi Arabia',
     mapLink: 'https://maps.google.com/?q=Dammam%2C+Saudi+Arabia',
@@ -20,7 +20,7 @@ exports.defaultSiteSettings = {
             enabled: true,
         },
         whatsapp: {
-            url: 'https://wa.me/966500000000',
+            url: 'https://wa.me/966554249731',
             enabled: true,
         },
         facebook: {
@@ -37,10 +37,10 @@ exports.defaultSiteSettings = {
         },
     },
     serviceImages: {
-        acRepair: 'https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
-        fridgeRepair: 'https://images.pexels.com/photos/4108713/pexels-photo-4108713.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
-        washingMachineRepair: 'https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
-        electronicsRepair: 'https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=900&w=1400&fm=webp',
+        acRepair: '/images/ac-care.png',
+        fridgeRepair: '/images/refrigeration-care.png',
+        washingMachineRepair: '/images/laundry-system-care.png',
+        electronicsRepair: '/images/electronics-care.png',
     },
 };
 //# sourceMappingURL=default-site-settings.js.map

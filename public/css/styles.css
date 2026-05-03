@@ -127,6 +127,14 @@ img {
   box-shadow: 0 12px 40px rgba(217, 179, 108, 0.25);
 }
 
+.brand-logo {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  display: block;
+}
+
 .brand-copy {
   display: flex;
   flex-direction: column;
